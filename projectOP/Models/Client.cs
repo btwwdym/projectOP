@@ -6,7 +6,6 @@ namespace app
         private readonly int _id;
         private string _companyName;
         private string _address;
-        // tutaj ten interjes pozwala ci na wpierdalanie roznych klass contractów
         private IContract _contract;
 
         public Client(int id, string companyName, string address, IContract contract)

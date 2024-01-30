@@ -1,12 +1,7 @@
 using System.Text.Json.Serialization;
-// tutaj masz interjes i contracty ktore sa fieldsem w klasie client
 
 namespace app
 {
-    // ta jedna linijka i plik w folderze utils jest z chatGPT bo 
-    // nie mozna normlanie deserializacji json robic z interfejsow
-    // ogolnie to co utils i ta jedna linijka robi to pozwala ci na zapisyywanie o odczytwanie klas z interfejsami z JSON
-    // moze da sie inaczej i bardziej elegancko ale je kurwa nie mam pojecia jak
     [JsonConverter(typeof(InterfaceConverter))]
     public interface IContract
     {

@@ -1,15 +1,13 @@
 using System.Text.Json;
-// controller clienta
-// czyli dodawanie,usuwanie itp
 
 namespace app
 {
     public class ClientManager
     {
         private List<Client> _clients = new List<Client>();
-        // tutaj dajesz sciezke swojego programu 
+
         private readonly string _jsonFilePath = "clients.json";
-        // zapisywanie do jsona helper i bez nadpisywania danych
+
         public void SaveToJson()
         {
             try
@@ -38,7 +36,6 @@ namespace app
                     _clients = JsonSerializer.Deserialize<List<Client>>(json);
 
                     
-                    // po dodaniu do listy odczytujesz z listy uzwajac petli
                     Console.WriteLine("Client list:");
                     foreach (var client in _clients)
                     {
